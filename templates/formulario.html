@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Clasificador de Insectos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         function clasificarInsecto(event) {
             event.preventDefault();
@@ -30,15 +31,24 @@
         }
     </script>
 </head>
-<body>
-    <h1>Clasificador de Insectos</h1>
-    <form id="formulario" onsubmit="clasificarInsecto(event)">
-        <label for="abdomen">Longitud del Abdomen:</label>
-        <input type="text" id="abdomen" name="abdomen"><br><br>
-        <label for="antena">Longitud de las Antenas:</label>
-        <input type="text" id="antena" name="antena"><br><br>
-        <input type="submit" value="Enviar">
-    </form>
-    <p id="resultado"></p>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="max-w-md w-full bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h1 class="text-3xl font-bold mb-4 text-center">Clasificador de Insectos</h1>
+        <h4 class="text-3xl mb-4 text-center">James Brian Hernandez Hernandez </h4>
+        <form id="formulario" onsubmit="clasificarInsecto(event)">
+            <div class="mb-4">
+                <label for="abdomen" class="block text-gray-700 text-sm font-bold mb-2">Longitud del Abdomen:</label>
+                <input type="text" id="abdomen" name="abdomen" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+                <label for="antena" class="block text-gray-700 text-sm font-bold mb-2">Longitud de las Antenas:</label>
+                <input type="text" id="antena" name="antena" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="flex items-center justify-between">
+                <input type="submit" value="Enviar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            </div>
+        </form>
+        <h2 id="resultado" class="text-center  font-bold text-red-500 mt-4"></h2>
+    </div>
 </body>
 </html>
